@@ -1,0 +1,138 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title> AITEC Tools - with impress.js </title>
+    
+    <meta name="description" content="AITEC Presentation" />
+    <meta name="author" content="Fabian Mächler" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css" rel="stylesheet" />
+	<link href="css/d3.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+	
+	<div id="arduino"class="step" data-x="0" data-y="0" data-scale="3">
+   	</div>
+	
+    <div id="Title" class="step slide" data-x="-2200" data-y="1000" data-rotate="90" data-scale="2">
+    	<q>
+        	<h1> <b>AITEC</b> Arduino</h1>
+        	<span class="footnote">( The evil mad scientist's main tool. )</span>
+		</q>
+    </div>
+
+    <div id="techdata" class="step slide" data-x="2000" data-y="0" data-rotate="-90">
+    	<q>	
+			<h3> Technische Daten</h3>
+			<q>
+			<ul type="square" class="tiny">
+				<li>Microcontroller	ATmega328</li>
+				<li>Operating Voltage	5V</li>
+				<li>Input Voltage (recommended)	7-12V</li>
+				<li>Input Voltage (limits)	6-20V</li>
+				<li>Digital I/O Pins	14 (of which 6 provide PWM output)</li>
+				<li>Analog Input Pins	6</li>
+				<li>DC Current per I/O Pin	40 mA</li>
+				<li>DC Current for 3.3V Pin	50 mA  </li>
+				<li>Flash Memory	32 KB (ATmega328) of which 0.5 KB used by bootloader </li>
+				<li>SRAM	2 KB (ATmega328)</li>
+				<li>EEPROM	1 KB (ATmega328)  </li>
+				<li>Clock Speed	16 MHz </li>
+			</ul>
+			<span class="footnote">( ... weniger ist mehr! )</span>
+			</q>
+		</q>
+	</div>
+	
+    <div id="signals" class="step slide" data-x="-500" data-y="-1800">
+		<q>
+        	<span class="footnote">Signale</span>
+			</br>
+			<div id="digital" class"tiny">
+				Digital:
+			</div>
+			<div id="analog" class"tiny">
+				Analog:
+			</div>
+			
+		</q>
+    </div>
+	
+    <div id="code" class="step slide" data-x="500" data-y="-1800">
+    	<q>
+        	<h2> First Sketch</h2>
+			<pre class="code">
+				int ledPin = 13;                 // LED connected to digital pin 13
+
+				void setup()
+				{
+				  pinMode(ledPin, OUTPUT);      // sets the digital pin as output
+				}
+
+				void loop()
+				{
+				  digitalWrite(ledPin, HIGH);   // sets the LED on
+				  delay(1000);                  // waits for a second
+				  digitalWrite(ledPin, LOW);    // sets the LED off
+				  delay(1000);                  // waits for a second
+				}
+			</pre>
+			
+		</q>
+    </div>
+	
+	<div id="demo" class="step slide" data-x="1500" data-y="-1800">
+    	<q>
+        	<h2>Demo</h2>
+			<q>
+				Lightdisplay
+			</q>
+			<span class="footnote"></br></span>
+		</q>
+    </div>
+
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="5">
+    </div>
+
+</div>
+
+
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/analogSignal.js"></script>
+<script src="js/digitalSignal.js"></script>
+<script>
+	impress().init();
+	addAnalog();
+	tickAnalog();
+	addDigital();
+	tickDigital();
+</script>
+
+
+</body>
+</html>

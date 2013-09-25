@@ -41,6 +41,11 @@ table {
     border-spacing: 0;
 }
 
+img, embed {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
 /*
     Now here is when interesting things start to appear.
 
@@ -235,17 +240,6 @@ a:focus {
     white-space: nowrap;
 }
 
-/*
-    And now we start to style each step separately.
-
-    I agree that this may be not the most efficient, object-oriented and
-    scalable way of styling, but most of steps have quite a custom look
-    and typography tricks here and there, so they had to be styled separately.
-
-    First is the title step with a big <h1> (no room for padding) and some
-    3D positioning along Z axis.
-*/
-
 #title {
     padding: 0;
 }
@@ -352,17 +346,23 @@ h3 {
     background-repeat: no-repeat;
 }
 
-#lamp {
-    background-image: url('img/lamp2.gif'); 
-	background-position: bottom right;
-    background-repeat: no-repeat;
+#numerdisplay_svg { 
+    height: 350px;
+    padding: 10px 10px;
+}
+
+#numerdisplay_rest_svg { 
+    height: 550px;
+    padding: 10px 10px;
 }
 
 
 .code{
-	font-size: 18px;
+	font-family: 'Droid Sans Mono';
+	font-size: 24px;
 	line-height: 1.5;
 	margin :40px;
+	margin-left: 0px;
 }
 
 .tiny{

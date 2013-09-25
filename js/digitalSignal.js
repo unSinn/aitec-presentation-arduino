@@ -1,8 +1,9 @@
 var digitalGraph = new Object();
+digitalGraph.lastValue = 0; // keep binary signal at one level for a amount of time
 
 function addDigital(){
 	var n = 40,
-	    random = d3.random.normal(0, 1),
+	    random = d3.random.normal(0, 0),
 	    data = d3.range(n).map(random);
  
 	var margin = {top: 20, right: 20, bottom: 20, left: 40},
@@ -59,10 +60,11 @@ function addDigital(){
 
 
 function tickDigital() {
-  // push a new data point onto the back
-  digitalGraph.data.push(Math.floor(Math.random()+0.5));
- 
-  // redraw the line, and slide it to the left
+	
+	digitalGraph.lastValue = Math.floor(Math.random()+0.5);
+	digitalGraph.data.push(digitalGraph.lastValue);
+
+   // redraw the line, and slide it to the left
   digitalGraph.path
       .attr("d", digitalGraph.line)
       .attr("transform", null)

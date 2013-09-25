@@ -44,17 +44,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1440"
-     inkscape:window-height="878"
+     inkscape:window-width="1920"
+     inkscape:window-height="1068"
      id="namedview4948"
      showgrid="false"
      inkscape:zoom="2.0565246"
      inkscape:cx="327.18733"
-     inkscape:cy="134.16772"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cy="95.26714"
+     inkscape:window-x="1440"
+     inkscape:window-y="22"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g3380" />
+     inkscape:current-layer="svg4034" />
   <g
      id="g3380"
      transform="translate(11.42814,4.5369538)">
@@ -2140,5 +2140,5 @@
        id="tspan3787"
        x="152.14178"
        y="197.25146"
-       style="font-size:11.19999981px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Arial;-inkscape-font-specification:Arial">5-12V</tspan></text>
+       style="font-size:11.19999981px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Arial;-inkscape-font-specification:Arial">7-12V</tspan></text>
 </svg>

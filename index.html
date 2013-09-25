@@ -30,15 +30,21 @@
 
 <div id="impress">
 	
-	<div id="arduino"class="step" data-x="0" data-y="0" data-scale="3">
+	<div id="arduino"class="step" data-x="0" data-y="0" data-scale="3" >
    	</div>
 	
-    <div id="Title" class="step slide" data-x="-2200" data-y="1000" data-rotate="90" data-scale="2">
+    <div id="Title" class="step slide" data-x="-2100" data-y="900" data-rotate="90" data-scale="2">
     	<q>
         	<h1> <b>AITEC</b> Arduino</h1>
-        	<span class="footnote">( The evil mad scientist's main tool. )</span>
+        	<span class="footnote">( The evil mad scientists main tool. )</span>
+			<a href="https://github.com/unSinn/aitec-presentation-arduino.git">
+				<img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
+			</a>
 		</q>
     </div>
+	
+	<div id="arduino"class="step" data-x="0" data-y="0" data-scale="3" >
+   	</div>
 
     <div id="techdata" class="step slide" data-x="2000" data-y="0" data-rotate="-90">
     	<q>	
@@ -63,6 +69,29 @@
 		</q>
 	</div>
 	
+    <div id="code" class="step slide" data-x="-1500" data-y="-1800">
+    	<q>
+        	<h2> First Sketch</h2>
+			<pre class="tiny code">
+int ledPin = 13;                 // LED connected to digital pin 13
+
+void setup()
+{
+  pinMode(ledPin, OUTPUT);      // sets the digital pin as output
+}
+
+void loop()
+{
+  digitalWrite(ledPin, HIGH);   // sets the LED on
+  delay(1000);                  // waits for a second
+  digitalWrite(ledPin, LOW);    // sets the LED off
+  delay(1000);                  // waits for a second
+}
+			</pre>
+			
+		</q>
+    </div>
+	
     <div id="signals" class="step slide" data-x="-500" data-y="-1800">
 		<q>
         	<span class="footnote">Signale</span>
@@ -77,40 +106,75 @@
 		</q>
     </div>
 	
-    <div id="code" class="step slide" data-x="500" data-y="-1800">
+	<div id="methoden" class="step slide" data-x="500" data-y="-1800">
     	<q>
-        	<h2> First Sketch</h2>
-			<pre class="code">
-				int ledPin = 13;                 // LED connected to digital pin 13
-
-				void setup()
-				{
-				  pinMode(ledPin, OUTPUT);      // sets the digital pin as output
-				}
-
-				void loop()
-				{
-				  digitalWrite(ledPin, HIGH);   // sets the LED on
-				  delay(1000);                  // waits for a second
-				  digitalWrite(ledPin, LOW);    // sets the LED off
-				  delay(1000);                  // waits for a second
-				}
-			</pre>
-			
-		</q>
-    </div>
-	
-	<div id="demo" class="step slide" data-x="1500" data-y="-1800">
-    	<q>
-        	<h2>Demo</h2>
+        	<h2>Methoden</h2>
 			<q>
-				Lightdisplay
+				<pre class="tiny code">
+analogRead();   // 0..1024 ~= 0..5V, takes about 100ms, only A-pins 
+analogWrite();  // PWM 0..255, only	PWM-pins
+
+pinMode();      // INPUT, OUTPUT, INPUT_PULLUP
+
+digitalRead();  // 0..1 = true,false = HIGH,LOW
+digitalWrite(); // 0..1 = true,false = HIGH,LOW
+				</pre>
+				-> siehe <a href="http://arduino.cc/en/Reference/HomePage">Arduino API </a>
 			</q>
 			<span class="footnote"></br></span>
 		</q>
     </div>
+	
+	<div id="arduino"class="step" data-x="0" data-y="0" data-scale="3" >
+   	</div>
+	
+    <div id="pwm" class="step slide" data-x="1500" data-y="-1800">
+		<q>
+        	<h2>PWM</h2>
+			<img src="css/img/pwm.gif" alt="peeweeeem">
+		</q>
+    </div>
+	
+	<div id="arduino"class="step" data-x="0" data-y="0" data-scale="3" >
+   	</div>
+	
+	<div id="libraries" class="step slide" data-x="-500" data-y="1800" >
+    	<q>
+        	<h2>Libraries</h2>
+			<img src="css/img/ImportLibraryFromFile.png" alt="jaja, wir arbeiten eigentlich (lieber) unter Linux">
+		</q>
+		
+    </div>
+	
+	<div id="numerdisplay" class="step slide" data-x="500" data-y="1800" >
+    	<q>
+        	<h2>Demo</h2>
+			<q >
+				<a href="https://github.com/unSinn/AITEC-Light-Example-Arduino.git">
+					<img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub">
+				</a>
+			    <embed id="numerdisplay_svg"src="css/img/NumberDisplay.svg" type="image/svg+xml" />
+			</q>
+		</q>
+    </div>
+	
+	<div id="numerdisplay_rest" class="step slide" data-x="1500" data-y="1800" >
+		<q>
+        	<h2>REST Example</h2>
+			<q >
+				<a href="https://github.com/unSinn/AITEC-Rest-Example-Arduino.git">
+					<img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub">
+				</a> 
+			    <embed id="numerdisplay_rest_svg"src="css/img/NumberDisplay_REST.svg" type="image/svg+xml" />
+			</q>
+			<span class="footnote"></br></span>
+		</q>
+    </div>
+	
+	
 
-    <div id="overview" class="step" data-x="0" data-y="0" data-scale="5">
+    <div id="overview" class="step" data-x="0" data-y="-100" data-scale="5">
+		
     </div>
 
 </div>
